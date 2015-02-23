@@ -221,9 +221,9 @@ public class JugadorZombies extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       AgregarPlantas ap = new AgregarPlantas();
-        ap.setLocationRelativeTo(null);
-        ap.setVisible(true);
+        AgrgarZombis az = new AgrgarZombis ();
+        az.setLocationRelativeTo(null);
+        az.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
