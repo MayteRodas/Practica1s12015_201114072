@@ -221,27 +221,27 @@ public class AgrgarZombis extends javax.swing.JFrame {
         
         if(jRadioButton1.isSelected()==true)
         {
-          tipoZ="margarita";
+          tipoZ="pequeno";
         }
         
         if(jRadioButton2.isSelected()==true)
         {
-          tipoZ="nuez";
+          tipoZ="mike";
         }
 
         if(jRadioButton2.isSelected()==true)
         {
-          tipoZ="tronco";
+          tipoZ="cono";
         }
 
         if(jRadioButton2.isSelected()==true)
         {
-          tipoZ="granada";
+          tipoZ="lenador";
         }
 
         if(jRadioButton2.isSelected()==true)
         {
-          tipoZ="lanzador";
+          tipoZ="frank";
         }
         
         if (pila.cima == null)
