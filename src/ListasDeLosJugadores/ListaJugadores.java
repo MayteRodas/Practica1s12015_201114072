@@ -12,8 +12,8 @@ import practica1s12015_201114072.*;
 public class ListaJugadores{
     public NodoListaJugadores raiz;
     public NodoListaJugadores n;
-    public ListaDatos listaDatos = new ListaDatos();
-   
+    public ListaDatos listaDatosP = new ListaDatos();
+    public ListaDatos listaDatosZ = new ListaDatos();
      
      
     public ListaJugadores()
