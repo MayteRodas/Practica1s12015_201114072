@@ -216,32 +216,21 @@ public class AgregarPlantas extends javax.swing.JFrame {
         String tipo="";
         
         if(jRadioButton1.isSelected()==true)
-        {
-          tipo="margarita";
-        }
+        {tipo="margarita";}
         
         if(jRadioButton2.isSelected()==true)
-        {
-          tipo="nuez";
-        }
+        {tipo="nuez";}
 
         if(jRadioButton2.isSelected()==true)
-        {
-          tipo="tronco";
-        }
+        {tipo="tronco";}
 
         if(jRadioButton2.isSelected()==true)
-        {
-          tipo="granada";
-        }
+        {tipo="granada";}
 
         if(jRadioButton2.isSelected()==true)
-        {
-          tipo="lanzador";
-        }
+        {tipo="lanzador";}
         
         NodoCola n = new NodoCola(jTextField1.getText(),Integer.parseInt(jTextField2.getText()),jTextField3.getText(),tipo);
-        
         cola.Insert(n);
 
         File ext = new File("Cola.gif");
@@ -250,8 +239,13 @@ public class AgregarPlantas extends javax.swing.JFrame {
 
         ImageIcon ic = new ImageIcon("Cola.gif");
         ic.getImage().flush();
-
         jLabel2.setIcon(ic);
+        
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -4,6 +4,8 @@
  */
 package practica1s12015_201114072;
 
+import javax.swing.JScrollPane;
+import EstructurasTablero.*;
 /**
  *
  * @author EQUIPO
@@ -15,6 +17,8 @@ public class CatalogoPlantas extends javax.swing.JFrame {
      */
     public CatalogoPlantas() {
         initComponents();
+        
+        
     }
 
     /**
