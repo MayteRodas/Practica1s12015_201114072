@@ -14,9 +14,6 @@ public class Practica1s12015_201114072 {
      */
     
     public static void main(String[] args) {
-        CreacionJugadores cj = new CreacionJugadores();
-        cj.setLocationRelativeTo(null);
-        cj.setVisible(true);
-       
+        new Main();
     }
 }

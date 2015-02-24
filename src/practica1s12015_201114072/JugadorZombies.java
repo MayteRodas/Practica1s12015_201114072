@@ -63,7 +63,7 @@ public class JugadorZombies extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, -1, -1));
 
         jButton6.setText("Crear Catalogo de Zombies");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +71,7 @@ public class JugadorZombies extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 174, -1));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 174, -1));
 
         jButton8.setText("Enviar Campo extra");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class JugadorZombies extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, -1));
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Jugador Zombie");
@@ -87,15 +87,15 @@ public class JugadorZombies extends javax.swing.JFrame {
 
         jTextField3.setText("jTextField3");
         jTextField3.setEnabled(false);
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 196, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 196, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Nombre: ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Cantidad:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, -1, -1));
 
         jTextField1.setText("jTextField1");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -103,17 +103,17 @@ public class JugadorZombies extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 198, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 198, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Buscar Jugador:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
         jTextField2.setText("jTextField2");
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 196, -1));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 196, -1));
 
         jTextField4.setText("jTextField4");
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 200, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 200, -1));
 
         jButton9.setText("Habilitar campo extra");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +121,7 @@ public class JugadorZombies extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 174, -1));
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 174, -1));
 
         jButton2.setText("Eliminar Datos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -129,16 +129,16 @@ public class JugadorZombies extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Extra:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fon2.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -20, 700, 340));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, -20, 700, 390));
 
         jButton3.setText("Enviar Datos");
         jButton3.addActionListener(new java.awt.event.ActionListener() {

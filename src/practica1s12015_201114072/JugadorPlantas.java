@@ -62,7 +62,7 @@ public class JugadorPlantas extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Jugador Plantas");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, 39));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 39));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Nombre: ");
@@ -89,7 +89,7 @@ public class JugadorPlantas extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 174, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 174, -1));
 
         jButton2.setText("Eliminar Datos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +121,7 @@ public class JugadorPlantas extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, -1, -1));
 
         jButton6.setText("Crear catalogo");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,7 @@ public class JugadorPlantas extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 174, -1));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 174, -1));
 
         jButton5.setText("Enviar Campo extra");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +137,7 @@ public class JugadorPlantas extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Buscar Jugador:");
@@ -148,7 +148,7 @@ public class JugadorPlantas extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fon.png"))); // NOI18N
         jLabel7.setText("jLabel7");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 410));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
