@@ -6,6 +6,7 @@ package practica1s12015_201114072;
 import EstructurasTablero.*;
 import java.io.File;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 /**
  *
  * @author EQUIPO
@@ -17,6 +18,9 @@ public class AgrgarZombis extends javax.swing.JFrame {
      */
     public AgrgarZombis() {
         initComponents();
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
     }
     
     Pila pila = new Pila();
@@ -134,7 +138,11 @@ public class AgrgarZombis extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         
-        String tipoZ="";
+        if((jTextField1.getText().equals(null))||(jTextField1.getText().equals(null))||(jTextField1.getText().equals(null))){
+            JOptionPane.showMessageDialog(null, "Llene correctamente las casillas vacias!");
+        }
+        else{
+            String tipoZ="";
         
         if(jRadioButton1.isSelected()==true)
         {
@@ -176,7 +184,9 @@ public class AgrgarZombis extends javax.swing.JFrame {
         ImageIcon ic = new ImageIcon("Pila.gif");
         ic.getImage().flush();
 
-        jLabel2.setIcon(ic);
+        //jLabel2.setIcon(ic);
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

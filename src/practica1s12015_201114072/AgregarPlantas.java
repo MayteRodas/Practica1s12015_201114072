@@ -7,6 +7,7 @@ package practica1s12015_201114072;
 import EstructurasTablero.*;
 import java.io.File;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,6 +20,9 @@ public class AgregarPlantas extends javax.swing.JFrame {
      */
     public AgregarPlantas() {
         initComponents();
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
     }
     
     Cola cola = new Cola();
@@ -137,7 +141,12 @@ public class AgregarPlantas extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        String tipo="";
+        
+        if((jTextField1.getText().equals(null))||(jTextField1.getText().equals(null))||(jTextField1.getText().equals(null))){
+            JOptionPane.showMessageDialog(null, "Llene correctamente las casillas vacias!");
+        }
+        else{
+            String tipo="";
         
         if(jRadioButton1.isSelected()==true)
         {tipo="margarita";}
@@ -163,13 +172,10 @@ public class AgregarPlantas extends javax.swing.JFrame {
 
         ImageIcon ic = new ImageIcon("Cola.gif");
         ic.getImage().flush();
-        jLabel2.setIcon(ic);
+       // jLabel2.setIcon(ic);
         
-        
-        
-        
-        
-        
+            
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
