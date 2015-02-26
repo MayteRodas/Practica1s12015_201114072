@@ -142,7 +142,7 @@ public class AgregarPlantas extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         
-        if((jTextField1.getText().equals(null))||(jTextField1.getText().equals(null))||(jTextField1.getText().equals(null))){
+        if((jTextField1.getText().equals(""))||(jTextField2.getText().equals(""))||(jTextField3.getText().equals(""))){
             JOptionPane.showMessageDialog(null, "Llene correctamente las casillas vacias!");
         }
         else{
