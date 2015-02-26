@@ -32,22 +32,22 @@ public class ListaPlantas {
             return vacia; 
     }
     
-    public void insertar(String dato, String imagen){
+    public void insertar(String dato, String imagen, String puntos, String ataque){
         if(estaVacia()){
-            raiz = new NodoListaPlantas(dato, imagen);
+            raiz = new NodoListaPlantas(dato, imagen, puntos, ataque);
         }else{
             NodoListaPlantas temp = raiz;
             while(temp.siguiente!=null){
                 temp = temp.siguiente;
             }
-            temp.siguiente = new NodoListaPlantas(dato, imagen);
+            temp.siguiente = new NodoListaPlantas(dato, imagen, puntos, ataque);
         }
     }
     
     public void recorrer(){
         NodoListaPlantas temp = raiz;
         while(temp!=null){
-            System.out.println(temp.tipo);
+            System.out.println(temp.nombre);
             temp = temp.siguiente;
         }     
     }
@@ -62,11 +62,11 @@ public class ListaPlantas {
         
         if(n!=null)
         {
-            g.addln("top[ label = \""+raiz.tipo+"\" ];");
+            g.addln("top[ label = \""+raiz.nombre+"\" ];");
             n = raiz.siguiente;
             while(n!= null)
             {
-                g.addln("n" + i + "[ label=\"" + n.tipo + "\"];");
+                g.addln("n" + i + "[ label=\"" + n.nombre + "\"];");
                 i++;
                 n = n.siguiente;
             }            

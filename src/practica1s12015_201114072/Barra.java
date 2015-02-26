@@ -92,6 +92,7 @@ public void vel(){
              CreacionJugadores cj = new CreacionJugadores();
              cj.setLocationRelativeTo(null);
              cj.setVisible(true);
+             Barra.this.setVisible(false);
         }
                         setpro(la +i, i);
                    i++; }

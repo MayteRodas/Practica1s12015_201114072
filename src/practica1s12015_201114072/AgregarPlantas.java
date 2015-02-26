@@ -5,6 +5,7 @@
 package practica1s12015_201114072;
 
 import EstructurasTablero.*;
+import ListasDeLosJugadores.*;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -18,6 +19,9 @@ public class AgregarPlantas extends javax.swing.JFrame {
     /**
      * Creates new form AgregarPlantas
      */
+    
+    ListaPlantas plantasC = new ListaPlantas();
+    
     public AgregarPlantas() {
         initComponents();
         jTextField1.setText("");
@@ -59,6 +63,7 @@ public class AgregarPlantas extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -125,8 +130,16 @@ public class AgregarPlantas extends javax.swing.JFrame {
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 317, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/pc.jpg"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 370));
+        jLabel5.setText("Ver Catalogo");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 370));
+
+        jButton2.setText("Ver Catalogo");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 150, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,19 +162,19 @@ public class AgregarPlantas extends javax.swing.JFrame {
             String tipo="";
         
         if(jRadioButton1.isSelected()==true)
-        {tipo="margarita";}
+        {tipo="/imagenes/P1.gif";}
         
         if(jRadioButton2.isSelected()==true)
-        {tipo="nuez";}
+        {tipo="/imagenes/P2.png";}
 
         if(jRadioButton2.isSelected()==true)
-        {tipo="tronco";}
+        {tipo="/imagenes/P3.gif";}
 
         if(jRadioButton2.isSelected()==true)
-        {tipo="granada";}
+        {tipo="/imagenes/P4.gif";}
 
         if(jRadioButton2.isSelected()==true)
-        {tipo="lanzador";}
+        {tipo="/imagenes/lanzador";}
         
         NodoCola n = new NodoCola(jTextField1.getText(),Integer.parseInt(jTextField2.getText()),jTextField3.getText(),tipo);
         cola.Insert(n);
@@ -174,9 +187,24 @@ public class AgregarPlantas extends javax.swing.JFrame {
         ic.getImage().flush();
        // jLabel2.setIcon(ic);
         
-            
+        
+        plantasC.insertar(tipo, jTextField1.getText(),jTextField2.getText(), jTextField3.getText());     
+        File ext2 = new File("CatalogoPlantas.gif");
+        GraphViz g2 =plantasC.Draw();
+        g2.writeGraphToFile(g.getGraph(g.getDotSource(), "gif"), ext2);
+
+        ImageIcon ic2 = new ImageIcon("CatalogoPlantas.gif");
+        ic2.getImage().flush();
+        
+        
+        
+        
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new CatalogoPlantas(plantasC).setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,6 +248,7 @@ public class AgregarPlantas extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;

@@ -5,6 +5,7 @@
 package practica1s12015_201114072;
 import java.io.File;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import static practica1s12015_201114072.CreacionJugadores.lista1;
 
 /**
@@ -203,21 +204,27 @@ public class JugadorZombies extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        lista1.listaDatosZ.insertar(jTextField1.getText());
-        lista1.listaDatosZ.insertar(jTextField2.getText());
-        System.out.println("Se insero el dato correcto");
+        
+        if((jTextField1.getText().equals(""))||(jTextField2.getText().equals(""))||(jTextField3.getText().equals(""))){
+            JOptionPane.showMessageDialog(null, "Llene correctamente las casillas vacias!");
+        }
+        else{
+            lista1.listaDatosZ.insertar(jTextField1.getText());
+            lista1.listaDatosZ.insertar(jTextField2.getText());
+            System.out.println("Se insero el dato correcto");
 
-        File ext = new File("DatosZ.gif");
-        GraphViz g = lista1.listaDatosZ.Draw();
-        g.writeGraphToFile(g.getGraph(g.getDotSource(), "gif"), ext);
+            File ext = new File("DatosZ.gif");
+            GraphViz g = lista1.listaDatosZ.Draw();
+            g.writeGraphToFile(g.getGraph(g.getDotSource(), "gif"), ext);
 
-        ImageIcon ic = new ImageIcon("DatosZ.gif");
-        ic.getImage().flush();
+            ImageIcon ic = new ImageIcon("DatosZ.gif");
+            ic.getImage().flush();
 
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
+            jTextField1.setText("");
+            jTextField2.setText("");
+            jTextField3.setText("");
+            jTextField4.setText("");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

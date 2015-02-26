@@ -10,15 +10,17 @@ package ListasDeLosJugadores;
  */
 public class NodoListaPlantas {
     
-    public String tipo, imagen;
+    public String nombre, imagen, puntos, ataque;
     public NodoListaPlantas anterior;
     public NodoListaPlantas siguiente;
     
     
-    public NodoListaPlantas(String t, String img)
+    public NodoListaPlantas(String nom, String img, String ptos, String ata)
     {
-        tipo = t;
+        nombre = nom;
         imagen = img;
+        puntos = ptos;
+        ataque = ata;
         anterior = siguiente = null;
     }
 }

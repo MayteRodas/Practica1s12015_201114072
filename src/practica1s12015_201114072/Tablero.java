@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 /**
@@ -42,17 +43,23 @@ public class Tablero extends javax.swing.JFrame {
     public Tablero() {
         initComponents();
         
+      // Con caja de texto
+    String selec1 = JOptionPane.showInputDialog(null,"Ingrese numero de Columnas",JOptionPane.QUESTION_MESSAGE);  // el icono sera un iterrogante
+    String selec2 = JOptionPane.showInputDialog(null,"Ingrese numero de filas",JOptionPane.QUESTION_MESSAGE);  // el icono sera un iterrogante         
+
+    int a= Integer.parseInt(selec1);
+    int b= Integer.parseInt(selec2); 
         
-        for(int i=0; i<12; i++){
+        for(int i=0; i<a; i++){
         final int ii=i;
-            for(int j=0; j<8; j++){ 
+            for(int j=0; j<b; j++){ 
                 final int jj=j;
                 
                 
                 matriz[ii][jj]=new Matriz();
-                matriz[ii][jj].setBounds(110+ii*40,110+jj*40,40,40);
+                matriz[ii][jj].setBounds(300+ii*70,100+jj*70,70,70);
                 matriz[ii][jj].setVisible(true);
-                matriz[ii][jj].setBackground(Color.gray);
+                matriz[ii][jj].setBackground(Color.green);
                 matriz[ii][jj].addActionListener(new java.awt.event.ActionListener() {
                     
                     @Override
@@ -138,29 +145,33 @@ public class Tablero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         fondito = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setText("Regresar al Menu");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 592, 176, -1));
+
+        fondito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.png"))); // NOI18N
         fondito.setText("jLabel1");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(fondito, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(fondito, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 85, Short.MAX_VALUE))
-        );
+        getContentPane().add(fondito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        CreacionJugadores cj = new CreacionJugadores();
+        cj.setLocationRelativeTo(null);
+        cj.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,5 +210,6 @@ public class Tablero extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel fondito;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

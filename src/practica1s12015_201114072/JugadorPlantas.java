@@ -7,6 +7,7 @@ package practica1s12015_201114072;
 import ListasDeLosJugadores.*;
 import java.io.File;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import static practica1s12015_201114072.CreacionJugadores.lista1;
 
 
@@ -185,22 +186,27 @@ public class JugadorPlantas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        lista1.listaDatosP.insertar(jTextField1.getText());
-        lista1.listaDatosP.insertar(jTextField2.getText());
-        System.out.println("Se insero el dato correcto");
- 
-        File ext = new File("DatosP.gif");
-        GraphViz g = lista1.listaDatosP.Draw();
-        g.writeGraphToFile(g.getGraph(g.getDotSource(), "gif"), ext);
+        
+         if((jTextField1.getText().equals(""))||(jTextField2.getText().equals(""))||(jTextField3.getText().equals(""))){
+            JOptionPane.showMessageDialog(null, "Llene correctamente las casillas vacias!");
+        }
+        else{
+             lista1.listaDatosP.insertar(jTextField1.getText());
+            lista1.listaDatosP.insertar(jTextField2.getText());
+            System.out.println("Se insero el dato correcto");
 
-        ImageIcon ic = new ImageIcon("DatosP.gif");
-        ic.getImage().flush();
-       
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-        jTextField4.setText("");
+            File ext = new File("DatosP.gif");
+            GraphViz g = lista1.listaDatosP.Draw();
+            g.writeGraphToFile(g.getGraph(g.getDotSource(), "gif"), ext);
 
+            ImageIcon ic = new ImageIcon("DatosP.gif");
+            ic.getImage().flush();
+
+            jTextField1.setText("");
+            jTextField2.setText("");
+            jTextField3.setText("");
+            jTextField4.setText("");
+         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
